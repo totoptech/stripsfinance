@@ -1,0 +1,52 @@
+@import 'styles/variables/common';
+@import 'styles/mixins/responsive';
+
+
+.panel {
+  max-width: $panel-width;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em -5px 2em -5px;
+
+  .col4 {
+    width: 33.33%;
+    padding: 0 5px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $break-md) {
+      width: 100%;
+    }
+  }
+
+  .detail {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    transition: .5s background-color;
+    user-select: none;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    .label {
+      font-size: .8rem;
+      margin-bottom: .5em;
+      display: block;
+      color: #888;
+    }
+
+    .value {
+      font-size: .9rem;
+      color: #000;
+    }
+  }
+}
